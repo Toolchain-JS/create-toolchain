@@ -1,0 +1,19 @@
+{
+  "name": "toolchain",
+  "version": "0.0.1",
+  "description": "Toolchain CLI - npm/yarn init utility",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/toolchain-js/toolchain"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "index.js"
+  ],
+  "engines": {
+    "node": ">=12"
+  }
+}
