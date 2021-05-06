@@ -9,7 +9,11 @@ any bundler (Webpack, Parcel, Rollup, ...) Projects are initialized by running C
 $ npx create-toolchain project-name --template [template-name]
 ```
 
-For more options use `npx create-toolchain --help`.
+For more options check `npx create-toolchain --help`. To run our example template & toolchain please check:
+
+```shell
+$ npx create-toolchain project-name --template @toolchain-js/rollup-library
+```
 
 ## How it works?
 
