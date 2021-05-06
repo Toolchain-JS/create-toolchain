@@ -1,6 +1,6 @@
 {
   "name": "create-toolchain",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Toolchain CLI - project initialization utility",
   "keywords": [
     "toolchain-js",
@@ -14,6 +14,7 @@
     "webpack",
     "rollup",
     "parcel",
+    "create",
     "bootstrap",
     "boilerplate",
     "kit",

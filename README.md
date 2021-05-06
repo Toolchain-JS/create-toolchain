@@ -96,12 +96,8 @@ module.exports = function (
     projectPath,
     projectName,
     template,
-    programDirectory,
-    verbose,
-    useYarn
+    programDirectory
 ) {
-    // your custom setup code here
-    
     // Map template package.js key/values 
     const projectPackage = require(path.join(projectPath, 'package.json'));
     const templatePackage = template['package'] || {};
@@ -119,6 +115,15 @@ module.exports = function (
         JSON.stringify(projectPackage, null, 2) + os.EOL,
     );
 
+    // Copy template files
+    const templateDir = path.join(template['path'], 'template');
+    if (fs.existsSync(templateDir)) {
+        fs.copySync(templateDir, projectPath);
+    } else {
+        console.error(`Could not locate supplied template: ${chalk.green(templateDir)}`);
+        return;
+    }
+
     // Remove Toolchain CLI template from dependencies
     const proc = spawn.sync('npm', ['uninstall', template['name']], {
         stdio: 'inherit',
@@ -130,8 +135,9 @@ module.exports = function (
 };
 ```
 
-The minimum that `scripts/init.js` needs to do is given in the example:
+You may use the example above as a starting point for your toolchain. The minimum that `scripts/init.js` needs to do is:
  * map template `package.json` keys/values to new project's `package.json`;
+ * copy template files to new project;
  * remove template dependency from the new project. 
 
 For more things that could be done in toolchain package please check example packages in 
