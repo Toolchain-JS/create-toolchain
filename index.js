@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 /**
  * Toolchain CLI - project initialization utility
  */

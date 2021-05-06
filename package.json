@@ -1,6 +1,6 @@
 {
   "name": "create-toolchain",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Toolchain CLI - project initialization utility",
   "license": "MIT",
   "repository": {
