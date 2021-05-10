@@ -154,7 +154,8 @@ Path to new project directory and project's name.
 Contains the values from the manifest, plus few additional:
 * `name` name and version of template package
 * `path` path to the template package in project's `node_modules`
-* `toolchain` name and version of toolchain package
+* `toolchain` template configured toolchain package (npm package name, local path to package or archive)
+* `toolchainPackageName` toolchain package name
 * `package` template keys/values that will be added to the new project's `package.json`
 
 ### `programDirectory`

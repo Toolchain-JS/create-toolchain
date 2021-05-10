@@ -188,7 +188,12 @@ function createProject(root, projectName, template, useYarn, verbose, programDir
             const toolchainToInstall = templateJSON.toolchain;
             return getPackageInfo(toolchainToInstall)
                 .then(toolchainPackageInfo => ({
-                    template: {path: templatePath, name: templatePackageInfo.name, ...templateJSON},
+                    template: {
+                        path: templatePath,
+                        name: templatePackageInfo.name,
+                        toolchainPackageName: toolchainPackageInfo.name,
+                        ...templateJSON
+                    },
                     templatePackageInfo,
                     toolchainToInstall,
                     toolchainPackageInfo,
